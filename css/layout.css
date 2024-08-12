@@ -1,0 +1,150 @@
+@font-face {
+  font-family: sourceSansPro;
+  src: url(/fonts/SourceSans3.ttf);
+}
+
+*{
+    box-sizing: border-box;
+}
+
+
+html,
+body{
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+    font-family: sourceSansPro, sans-serif;
+}
+
+.container{
+    max-width: 1085px;
+    margin: 0 auto;
+}
+
+/* MAIN HEADER */
+
+.main-header{
+    background-color: white;
+    display: flex;
+    gap: 2em;
+    align-items: stretch;
+    justify-content: space-between;
+    padding: 0 1.25em;
+}
+
+/* SHARED LOGO AND NAV */
+
+.logo-container,
+.nav-container{
+    display: flex;
+    margin: 0;
+    padding: 1.5em 0;
+    height: 100%;
+    align-items: center;
+}
+
+.logo-text,
+.nav-link{
+    color: #111827;
+}
+
+/* LOGO */
+
+.logo-container{
+    gap: 0.25em;
+}
+
+.logo-img{
+    width: 1.5em;
+    height: 1.5em;
+}
+
+.logo-text{
+    font-size: 0.875rem;
+    font-weight: 700;
+    text-transform: capitalize;
+}
+
+/* NAV */
+
+.nav-container{
+    gap: 1.5em;
+    list-style: none;
+}
+
+.nav-link{
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.nav-link:hover,
+.nav-link:focus{
+    color: #4B5563;
+    text-decoration-line: underline;
+}
+
+/* FOOTER */
+
+.footer{
+    gap: 0.25em;
+    display: flex;
+    flex-direction: column;
+    background-color: #111827;
+    align-items: center;
+    justify-content: center;
+    padding: 2.25em;
+}
+
+.footer-title{
+    font-size: 0.75rem;
+    line-height: 1.25;
+    font-weight: bold;
+    color: #F9FAFB;
+    margin: 0;
+    text-transform: capitalize;
+}
+
+.copyright-notice{
+    font-size: 0.75rem;
+    line-height: 1.25;
+    color: #D1D5DB;
+    margin: 0;
+}
+
+/* MEDIA QUERIES */
+
+@media (min-width: 480px){ 
+    .main-header{
+        padding-left: 2.15em;
+        padding-right: 2.15em;
+
+    }   
+    
+}
+
+@media(min-width: 768px){ 
+    .main-header{
+        padding-left: 3.3em;
+        padding-right: 3.3em;
+
+    } 
+    .logo-img{
+        width: 2.125em;
+        height: 2.125em;
+    }
+    
+    .logo-text{
+        font-size: 1.25rem;
+    }
+    
+    .nav-link{
+        font-size: 1rem;
+    }
+    
+    .footer-title,
+    .copyright-notice{
+        font-size: 0.875rem;
+    }
+}

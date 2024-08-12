@@ -1,0 +1,239 @@
+
+/* FEATURED BLOG */
+
+.featured-blog{
+    display: flex;
+    background-color: #6F635A;
+    background-image: url('/images/featured-img.png');
+    min-height: 320px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 6em 1em 1.25em;
+}
+
+.featured-blog-header{
+    margin-top: auto;
+}
+
+.featured-blog-link{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+    text-decoration: none;
+}
+
+.featured-blog-link:hover,
+.featured-blog-link:focus{
+    transform: scale(1.02);
+}
+
+.featured-blog-time,
+h1,
+.featured-blog-desc{
+    margin: 0;
+    color: white;
+    text-shadow: 2px 2px 5px rgba(43, 37, 33, 0.7);
+}
+
+.featured-blog-time{
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    line-height: 1;
+}
+
+h1{
+    font-size: 2rem;
+    line-height: 1.25;
+    text-wrap: balance;
+}
+
+.featured-blog-desc{
+    font-size: 1rem;
+    line-height: 1.35;
+}
+
+/* BLOGS */
+
+.blogs{
+    background-color: #F3F4F6;
+    row-gap: 2.5em;
+    display: grid;
+    grid-template-columns: 1em 1fr 1em;
+    grid-template-areas:
+        "..... ..... ....."
+        "..... blog1 ....."
+        "..... blog2 ....."
+        "..... blog3 ....."
+        "..... vmbtn ....."
+        "..... ..... ....."
+        ;
+}
+
+.blog-link{
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.blog-one{
+    grid-area: blog1;
+}
+
+.blog-two{
+    grid-area: blog2;
+}
+
+.blog-three{
+    grid-area: blog3;
+}
+
+.blog-four{
+    grid-area: blog4;
+}
+
+.blog-five{
+    grid-area: blog5;
+}
+
+.blog-six{
+    grid-area: blog6;
+}
+
+.blog-four,
+.blog-five,
+.blog-six{
+    display: none;
+}
+
+.blog-article:hover,
+.blog-article:focus{
+    transform: scale(1.02);
+}
+
+.blog-img{
+    width: 100%;
+    aspect-ratio: 3/2;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 6px;
+}
+
+.blog-article time{
+    font-size: 1rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: black;
+}
+
+h2{
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 0.5em 0;
+    line-height: 1.25;
+    color: black;
+}
+
+.blog-article p{
+    color: #505050;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.35;
+    margin-top: 0;
+}
+
+.blog-article:last-child p{
+    margin-bottom: 0;
+}
+
+.view-more-btn{
+    font-size: 1rem;
+    font-weight: 700;
+    color: black;
+    grid-area: vmbtn;
+    width: fit-content;
+    margin: 0 auto;
+    background-color: white;
+    border: none;
+    border-bottom: 2px solid black;
+    text-transform: capitalize;
+    padding: 0;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.view-more-btn:hover,
+.view-more-btn:focus{
+    color: #4B5563;
+    border-bottom-color: #4B5563;
+}
+
+/* MEDIA QUERIES */
+
+@media (min-width: 480px){ 
+    .featured-blog{
+        min-height: 410px;
+        background-image: url("/images/featured-img-large.png");
+        padding-bottom: 2.5em;
+    }
+
+    .featured-blog{
+        padding-left: 2.15em;
+        padding-right: 2.15em;
+
+    }
+    
+    .blogs{
+        column-gap: 1.625em;
+        row-gap: 3.3em;
+        grid-template-columns: 0.525em repeat(2, 1fr) 0.525em;
+        grid-template-areas:
+            "..... ..... ..... ....."
+            "..... blog1 blog2 ....."
+            "..... blog3 blog4 ....."
+            "..... blog5 blog6 ....."
+            "..... vmbtn vmbtn ....."
+            "..... ..... ..... .....";
+    }
+    
+    .blogs article:nth-child(n+4){
+        display: block;
+    }    
+    
+    .featured-blog-time{
+        font-size: 1rem;
+    }
+    
+    h1{
+        font-size: 2.5rem;
+    }
+    
+}
+
+@media(min-width: 768px){ 
+    .featured-blog{
+        padding-left: 3.3em;
+        padding-right: 3.3em;
+
+    }
+    
+    .featured-blog{
+        min-height: 500px;
+        padding-bottom: 3.75em;
+    }
+    
+    .featured-blog-desc{
+        width: 64%;
+    }
+    
+    .blogs{
+        grid-template-columns: 1.675em repeat(3, 1fr) 1.675em;
+        grid-template-areas:
+            "..... ..... ..... ..... ....."
+            "..... blog1 blog2 blog3 ....."
+            "..... blog4 blog5 blog6 ....."
+            "..... ..... vmbtn ..... ....."
+            "..... ..... ..... ..... .....";
+    }
+}

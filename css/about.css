@@ -1,0 +1,217 @@
+/* POST */
+
+.post{
+    background-color: #F3F4F6;
+    padding: 1.625em 1.25em;
+    display: flex;
+    flex-direction: column;
+    gap: 3.125em;
+    font-weight: 400;
+    color: #111827;
+}
+
+    /* POST HEADER */
+
+.post-header{
+    display: flex;
+    flex-direction: column;
+    gap: 1.625em;
+    color: #111827;
+}
+
+.post-header img{
+    display: block;
+    width: 50%;
+}
+
+.post-header h1,
+.post-header p{
+    margin: 0;
+}
+
+.post-header section{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.post-header h1{
+    font-size: 2.25rem;
+    line-height: 1.05;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+}
+
+.post-header p{
+    font-size: 1rem;
+    line-height: 1.25;
+}
+
+    /* POST BODY */
+
+.post-body{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.post-body h2,
+.post-body p{
+    font-size: 1rem;
+    line-height: 1.25;
+    margin: 0;
+}
+
+.post-body h2{
+    font-weight: 700;
+    color: #111827;
+}
+
+/* BLOGS */
+
+.blogs{
+    background-color: #F3F4F6;
+    display: grid;
+    grid-row-gap: 1.625em;
+    grid-template-columns: 1.25em 1fr 1.25em;
+    grid-template-areas:
+        "..... ..... ....."
+        "..... title ....."
+        "..... blog1 ....."
+        "..... blog2 ....."
+        "..... blog3 ....."
+        "..... ..... ....."
+        "..... ..... ....."
+        ;
+}
+
+.blogs h2{
+    margin: 0 auto;
+    font-size: 1rem;
+    line-height: 1.25;
+    grid-area: title;
+    font-weight: 700;
+}
+
+.blog-link{
+    color: #111827;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.blog-one{
+    grid-area: blog1;
+}
+
+.blog-two{
+    grid-area: blog2;
+}
+
+.blog-three{
+    grid-area: blog3;
+}
+
+.blog-article:hover,
+.blog-article:focus{
+    transform: scale(1.02);
+}
+
+.blog-img{
+    width: 100%;
+    aspect-ratio: 3/2;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 6px;
+}
+
+.blog-article-header{
+    display: flex;
+    flex-direction: column;
+    gap: 0.625em;
+}
+
+.blog-article-header time,
+.blog-article-header h3,
+.blog-article-header p{
+    margin: 0;
+}
+
+.blog-article-header time{
+    font-size: 0.875rem;
+    font-weight: 400;
+    line-height: 1.3;
+    text-transform: uppercase;
+}
+
+.blog-article-header h3{
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1.08;
+}
+
+.blog-article-header p{
+    color: #4B5563;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.25;
+}
+
+/* MEDIA QUERIES */
+
+@media(max-width: 768px){
+    .blog-two,
+    .blog-three{
+        margin-top: 0.875em;
+    }  
+    
+    .main-header{
+        padding-left: 1.25em;
+        padding-right: 1.25em;
+    }
+}
+
+@media(min-width: 768px){
+    .post{
+        padding-top: 5.625em;
+        padding-left: 3.25em;
+        padding-right: 3.25em;
+        gap: 4.125em;
+    }
+    
+    .post-header{
+        flex-direction: row;
+        align-items: center;
+        gap: 2em;
+    }
+    
+    .post-header img{
+        width: 12em;
+    }
+    
+    .post-header section{
+        gap: 0.625em;
+    }
+    
+    .post-body{
+        margin: 0 4.25em;
+    }
+    
+    .post-body h2{
+        font-size: 1.25rem;
+        line-height: 1.3;
+    }
+    
+    .blogs{
+        grid-column-gap: 1.625em;
+        grid-template-columns: 1.625em 1fr 1fr 1fr 1.625em;
+        grid-template-areas:
+            "..... ..... ..... ..... ....."
+            "..... ..... title ..... ....."
+            "..... blog1 blog2 blog3 ....."
+            "..... ..... ..... ..... ....."
+            "..... ..... ..... ..... ....."
+            ;       
+    }
+}

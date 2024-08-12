@@ -1,0 +1,270 @@
+/* POST */
+
+.post{
+    background-color: #F3F4F6;
+    display: flex;
+    flex-direction: column;
+    gap: 2.25em;
+    padding: 2em 1.25em 1.625em;
+    font-weight: 400;
+}
+
+    /* POST HEADER */
+    
+.post-header{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.post-header-time,
+.post-header-p,
+h1{
+    margin: 0;
+}
+
+.post-header-time{
+    color: #111827;
+    line-height: 1.25;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+}
+
+h1{
+    color: #111827;
+    line-height: 1.0625;
+    font-weight: 700;
+    font-size: 2rem;
+    letter-spacing: -0.03em;
+}
+
+.post-header-p{
+    line-height: 1.25;
+    font-size: 1rem;
+    color: #111827;
+}
+
+    /* POST IMG */
+    
+.full-post-image{
+    display: block;
+    aspect-ratio: 4/2;
+    object-fit: cover;
+    object-position: center 68%;
+}
+
+    /* POST BODY */
+    
+.post-body{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.post-body h2,
+.post-body p{
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1.25;   
+}
+
+.post-body h2{
+    color: #111827;
+    font-weight: 700;
+}
+
+.post-body p{
+    color: #111827;
+}
+
+    
+
+/* BLOGS */
+
+.blogs{
+    background-color: #F3F4F6;
+    display: grid;
+    grid-row-gap: 1.625em;
+    grid-template-columns: 1.25em 1fr 1.25em;
+    grid-template-areas:
+        "..... ..... ....."
+        "..... title ....."
+        "..... blog1 ....."
+        "..... blog2 ....."
+        "..... blog3 ....."
+        "..... ..... ....."
+        "..... ..... ....."
+        ;
+}
+
+.blogs h2{
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1.25;
+    grid-area: title;
+    text-align: center;
+    font-weight: 700;
+}
+
+.blog-link{
+    color: #111827;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.blog-one{
+    grid-area: blog1;
+}
+
+.blog-two{
+    grid-area: blog2;
+}
+
+.blog-three{
+    grid-area: blog3;
+}
+
+.blog-article:hover,
+.blog-article:focus{
+    transform: scale(1.02);
+}
+
+.blog-img{
+    width: 100%;
+    aspect-ratio: 3/2;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 6px;
+}
+
+.blog-article-header{
+    display: flex;
+    flex-direction: column;
+    gap: 0.625em;
+}
+
+.blog-article-header time,
+.blog-article-header h3,
+.blog-article-header p{
+    margin: 0;
+}
+
+.blog-article-header time{
+    font-size: 0.875rem;
+    font-weight: 400;
+    line-height: 1.3;
+    text-transform: uppercase;
+}
+
+.blog-article-header h3{
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1.08;
+}
+
+.blog-article-header p{
+    color: #4B5563;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.25;
+}
+
+/* MEDIA QUERIES */
+
+@media(max-width: 768px){
+    .blog-two,
+    .blog-three{
+        margin-top: 0.875em;
+    }  
+}
+
+@media(min-width: 480px){
+    .main-header{
+        padding-left: 1.25em;
+        padding-right: 1.25em;
+    }
+}
+
+
+@media(min-width: 768px){ 
+    .main-header,
+    .post{
+        padding-left: 3.25em;
+        padding-right: 3.25em;
+    }    
+    
+    .post{
+        padding-top: 4.5em;
+        padding-bottom: 2.25em;
+    }
+
+    .post-header,
+    .post-body{
+        margin-left: 4.25em;
+        margin-right: 4.25em;
+    }
+    
+    .post-header{
+        gap: 1.625em;
+    }
+    
+    .post-header-time{
+        font-size: 1rem;
+        line-height: 1.25;
+    }
+    
+    h1{
+        font-size: 2.25rem;
+        line-height: 1.1;
+    }
+    
+    .post-body{
+        gap: 1.5em;
+    }
+    
+    .post-body h2{
+        font-size: 1.5rem;
+        line-height: 1.25;
+    }
+    
+    .post-body p{
+        font-size: 1.125rem;
+        line-height: 1.2;
+    }
+    
+    .blogs h2{
+        font-size: 1.5rem;
+        line-height: 1.083;
+    }
+    
+    .blog-article-header time{
+        font-size: 0.875rem;
+        line-height: 1.28;
+    }
+    
+    .blog-article-header h3{
+        font-size: 1.5rem;
+        line-height: 1.08;
+    }
+    
+    .blog-article-header p{
+        font-size: 1rem;
+        line-height: 1.25;
+    }
+    
+    .blogs{
+        padding-top: 0.5em;
+        grid-column-gap: 1.625em;
+        grid-row-gap: 1.75em;
+        grid-template-columns: 1.625em repeat(3, 1fr) 1.625em;
+        grid-template-areas:
+            "..... ..... ..... ..... ....."
+            "..... ..... title ..... ....."
+            "..... blog1 blog2 blog3 ....."
+            "..... ..... ..... ..... ....."
+            "..... ..... ..... ..... ....."
+            ;
+    }
+}
